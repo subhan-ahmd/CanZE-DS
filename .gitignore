@@ -1,0 +1,55 @@
+# old manual entries
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/usage.statistics.xml
+/.idea/tasks.xml
+/.idea/assetWizardSettings.xml
+/.idea/caches/
+/projectFilesBackup/
+gradle.xml
+/app/google-services.json
+
+# newer standard best practice entries
+
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Android Studio
+*.iml
+
+.gradle
+build/
+.navigation
+captures/
+output.json
+
+#NDK
+obj/
+.externalNativeBuild
+
+# Keystores
+*.jks
+
+compiler.xml

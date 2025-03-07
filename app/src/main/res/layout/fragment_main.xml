@@ -1,0 +1,223 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context="lu.fisch.canze.fragments.MainFragment">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonConsumption"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_consumption"
+                        android:text="@string/button_Consumption" />
+
+                    <Button
+                        android:id="@+id/buttonChargingActivity"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_charge"
+                        android:text="@string/button_Charging" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonBattery"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_battery"
+                        android:text="@string/button_Battery" />
+
+                    <Button
+                        android:id="@+id/buttonDrivingActivity"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_drive"
+                        android:text="@string/button_Driving" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/buttonClimaTech"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_climate"
+                        android:text="@string/button_Climate" />
+
+                    <Button
+                        android:id="@+id/buttonBraking"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_brake"
+                        android:text="@string/button_Braking" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/buttonSpeed"
+                        style="?android:attr/button"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_column="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/button_speedcam"
+                        android:text="avg speed" />
+
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/textNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="?attr/colorButtonNormal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone" />
+
+            </TableLayout>
+
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar_cyclic0"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?attr/colorButtonNormal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/help_Main" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

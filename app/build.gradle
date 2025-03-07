@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file("$project.rootDir/keystores/CanZeKeyStore.jks")
+            storePassword 'canze4us!'
+            keyAlias = 'canze-upload'
+            keyPassword 'canze4us!'
+        }
+    }
+    compileSdkVersion 29
+    //buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "lu.fisch.canze"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionName '1.62'
+        versionCode 94
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            // minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //debug {
+        //    minifyEnabled true
+        //    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        //}
+    }
+    flavorDimensions "edition"
+    productFlavors {
+        playstore {
+            dimension "edition"
+        }
+        fdroid {
+            dimension "edition"
+        }
+    }
+    defaultConfig {
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+        buildConfigField "String", "BRANCH", "\"" + getGitRevParseInfo() + "\""
+        signingConfig signingConfigs.release
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+        disable 'TypographyFractions'
+    }
+}
+
+def getGitRevParseInfo() {
+    def cmd = "git rev-parse --abbrev-ref HEAD"
+    def proc = cmd.execute()
+    proc.text.trim()
+}
+
+dependencies {
+    // BoM for the Firebase platform
+    playstoreImplementation platform('com.google.firebase:firebase-bom:26.2.0')
+
+    // Dependencies for the desired Firebase products without specifying versions
+    playstoreImplementation 'com.google.firebase:firebase-analytics'
+    playstoreImplementation 'com.google.firebase:firebase-crashlytics'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'me.drakeet.support:toastcompat:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.preference:preference:1.1.1'
+}

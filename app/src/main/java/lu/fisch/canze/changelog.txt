@@ -1,0 +1,571 @@
+2020-05-07 [Jeroen] Version bump for Fdroid. Not release on Play (no code change)
+2020-02-16 [Jeroen] Extended addressing and ZE50 test code (aplha!)
+2020-02-02 [Jeroen] Removed phases count in advanced charging. Already show in Mains Current Type
+2020-01-25 [Jeroen] Switch off CANsee chatter on USB when on master branch
+2020-01-24 [Jeroen] CANsee device is selected when name starts (aot equals) CANsee
+2020-01-21 [Jeroen] Upgraded crashlytics to 17.2.2
+2020-01-21 [Jeroen] Extended addressing and ZE50 test code (aplha!)
+2020-01-20 [Jeroen] Several exceptions fixed
+2020-01-09 [Jeroen] Do not start Crashlytics in development branches
+2020-01-07 [Jeroen] Fix pilot amp formula for ISOTP mode (thanls Oleksiy Protas)
+2020-01-05 [Jeroen] New startup setting
+2020-01-05 [Bob] Color update in Dash
+2020-01-04 [Bob] Added custom fragment wich configuration editor in settings
+2020-01-03 [Jeroen] Remove crash(lytics) test code
+2020-01-03 [Jeroen] Experiment startup activity
+2020-01-03 [Jeroen] Added non-waiting splash screen https://www.bignerdranch.com/blog/splash-screens-the-right-way
+2020-01-02 [Jeroen] Removed experiment to avoid on abort crash in Android 8.1. Gave up.
+2020-01-01 [Jeroen] Avoid ugly layout in Timeplot when values go below baseline (i.e. comma)
+2020-01-01 [Jeroen] Regression: Trying to avoid a NPE in handleDarkMode (getSharedPreferences)
+2019-12-27 [Jeroen] Moved TPMS IDs to logical tire position block, auto-read IDs
+
+---< Version 1.51 / 2019.12.28 / 66 >---
+2019-12-27 [Jeroen] TargetSdk to 29 (Android Q)
+2019-12-27 [Jeroen] Some code cleanup, added Crashlytics on some non-fatal exceptions, inhibited log.D for master
+2019-12-27 [Jeroen] Slowed down Battery activity
+2019-12-25 [Jeroen] Force bit 31 on in TPMS ID (www.goingelectric.de/forum/viewtopic.php?p=1150046)
+2019-12-24 [Jeroen] Changed speedcontrol to respond to tap anywhere
+2019-12-24 [Jeroen] Added Front-Rear swap button to Tires
+2019-12-22 [Jeroen] Trying to avoid a NPE in handleDarkMode (getSharedPreferences)
+2019-12-21 [Jeroen] Fix what seems a crash at first run (but actually a finish() at a version change
+2019-12-21 [Jeroen] Fix a coloring problem in consumption_dash
+2019-12-21 [Bob] Avoid a crash in BluetoothManager
+2019-12-14 [Jeroen] Button reordering and formatting
+2019-12-14 [Jeroen] Added 5 line log to speedcontrol
+2019-12-13 [Jeroen] Clarification and code layout. No factual code change
+2019-12-13 [Jeroen] Fixed Darkmode not changing when exiting using Home button
+2019-12-13 [Jeroen] Improved settings dropdown styling
+
+---< Version 1.50 / 2019.12.13 / 63 >---
+2019-12-12 [Jeroen] Climate control temperature setpoint is back
+2019-12-10 [Jeroen] New option save and load two tire sets to storage
+2019-12-08 [Jeroen] Corrections in decimal positions in _Fields and _FieldsAlt
+2019-12-09 [Jeroen] Bug fix in Research, screen number format and reloading frames (freeing old fields)
+2019-12-08 [Jeroen] Recoding of selecting BT device and it's UI
+2019-12-08 [Bob] Dark mode startup fix
+2019-12-07 [Jeroen] Fix computation of virtual field 610a used in braking screen (non-ISOTP only)
+2019-12-07 [Jeroen] Match Self propelled fields behavior to Device queue
+2019-12-06 [Jeroen] Bug fix in research to handle String fields
+2019-12-06 [Jeroen] Add GPS virtual field ",800,24,24,0,0,0,,210e,610e,aff,GPS". Allow Virtualfields in CSVs
+2019-12-06 [Jeroen] Gradle to 3.5.3
+2019-12-05 [Jeroen] Added a light mode
+2019-12-05 [Jeroen] Avoid NullPointerException when databaseinstance is empty, lint
+2019-12-05 [Jeroen] Avoid stack overflow crash
+2019-12-03 [Jeroen] Small improvement to Speedcontrol
+2019-12-01 [Jeroen] Avoid restart of activity through re-orientation
+2019-12-01 [Jeroen] Changed news to json and give user update nudge
+2019-12-01 [Jeroen] Changed Gson to 2.8.6
+2019-11-27 [Jeroen] Added google's crashlytics, force crash option in debug mode
+
+---< Version 1.49 / 2019.11.30 / 56 >---
+2019-11-27 [Jeroen] Catch spurious error in Timeplot
+2019-11-27 [Jeroen] Code fixes and moved "tap bluetooth to reconnect" to work in all activities
+2019-11-26 [Jeroen] Nudge ISOTP on for ELM dongles, off for CanSee
+2019-11-25 [Jeroen] Updated proguard rules to fix or find a ClassNotFound crash
+2019-11-24 [Jeroen] Many fixes in tires, inclusing refactor "tyre" out and position fixes
+2019-11-24 [Jeroen] Set up quick release compile using gradlew
+2019-11-24 [Jeroen] BT state in all activities and out of title
+
+---< Version 1.48 / 2019.11.18 / 50 >---
+2019-11-24 [Jeroen] Code cleanup in fragment handling
+2019-11-24 [Jeroen] Updated .gitignore to exclude some .idea and backup stuff
+2019-11-23 [Jeroen] Full refactor of Tyre to Tire
+2019-11-23 [Jeroen] Several fixes Tyres, changelog
+2019-11-23 [Jeroen] Several Climate activity fixes, TMPS presence in (Alt)Fields
+2019-11-23 [Jeroen] Added documentation headers to _Fields csv files
+2019-11-23 [Jeroen] Ignore null frames when injecting an array of frames
+2019-11-23 [Jeroen] Allow all subcommands for tester present command to ECU
+2019-11-23 [Jeroen] Cleaned up case of Messages to always lower (unless error)
+
+---< Version 1.47 / 2019.11.18 / 49 >---
+2019-11-18 [Jeroen] TPMS write alternative approach, thanks Fred
+2019-11-18 [Jeroen] Added UK/RU tranlation, thanks @landswellsong, lint
+2019-11-17 [Jeroen] Fixed pilot current in ISOTP mode ( mgerZOE issue #584 )
+2019-11-17 [Jeroen] Avoid crash when clearing fields
+2019-11-17 [Jeroen] Avoid crash in Color decoding a themed color
+2019-11-15 [Jeroen] Fix massive errors when app is unconfigured
+2019-11-15 [Jeroen] Don't do free frame testing in ELM testing when in ISOTP mode
+2019-11-15 [Jeroen] In isotpOnly mode use insecure and relax andwers
+2019-11-12 [Jeroen] Removed all _web icons in main folder except launcher
+2019-11-12 [Jeroen] Moved all artwork except aunch icon to drawable
+2019-11-11 [Jeroen] Added BCM and USM, csv files
+2019-11-09 [Jeroen] Removed location permission from manifest (not used), manifest cleanup
+2019-11-09 [Jeroen] Added option in Experimental fragment to only show when not on master
+2019-11-09 [Jeroen] Fixed issue #578 Fan speed label
+
+---< Version 1.46 / 2019.11.10 / 48 >---
+2019-11-08 [Jeroen] Several Code and layout cleanups
+2019-11-08 [Jeroen] Fix crash in Firmware activity
+2019-11-07 [Jeroen] Updated all field CSV's
+2019-11-06 [Jeroen] Added Research activity
+2019-11-05 [Jeroen] Improved field logging
+2019-11-04 [Jeroen] Fixed consistency of ISOTP error msgs
+2019-11-04 [Jeroen] Shortened pre-command timeout to see if it improves long tx ISOTP sync errors.
+2019-11-04 [Jeroen] Gradle to 3.5.2
+2019-11-04 [Jeroen] Removed fields that cannot be fetched by ISOTP only
+2019-11-04 [Jeroen] Added ELM conversation logging
+2019-11-04 [Jeroen] Fixed problem that forbid writing log files
+2019-11-04 [Cedric] Update FR
+2019-11-02 [Jeroen] Alternative ISOTP mode to avoid free frames
+2019-10-25 [Jeroen] News updated re dark mode released
+
+---< Version 1.45 / 2019.10.25 / 47 >---
+2019-10-25 [Jeroen+Bob] Switch to API level 21
+
+---< Version 1.44 / 2019.10.24 / 45+46 >---
+2019-10-24 [Jeroen] Added .idea/codeStyles/Project.xml to the repository
+2019-10-24 [Jeroen] Added branch name to info in Settings screen
+2019-10-21 [Bob] Added "speed control" activity to display average speed
+2019-10-22 [Bob] Added "force dark mode" option
+2019-10-18 [Bob-Jeroen] Fix for dynamic color selection in widgets
+2019-10-18 [Jeroen] Added Build variant to info in Settings screen
+2019-10-18 [Bob] Added theme as optional parameter to Color.decode
+2019-10-17 [Jeroen] Widget colors use foreground theme color (this is intermediate)
+2019-10-17 [Jeroen] Better colors in delta widget and decel (blue) bar
+2019-10-10 [Jeroen] Title fix in Battery, color changes to avoid dark blue
+2019-10-03 [Jeroen] Widgets adhere to titleColor
+2019-10-03 [Jeroen] Gradle to 3.5.1
+2019-10-03 [Jeroen] Changed some color literals to resource names in consumption
+2019-10-03 [Jeroen] Added run time decoding of color resource names to allow names in widget json config strings
+2019-10-02 [Arnout] Changed header log logic
+2019-10-02 [Bob] Avoid null exception when clearing fields
+2019-09-29 [Jeroen] Reformatted Settings for consistency
+2019-09-29 [Jeroen] Corrected icon error for 12 volt battery (+- from white to transparent)
+2019-09-29 [Jeroen] Renamed "Bob Due" to "CanSee"
+2019-09-29 [Jeroen] Small layout issues
+2019-09-29 [Jeroen] Fixed regression on virtualfield dcPower
+2019-09-29 [Jeroen] Batches 1-2-3 for dark mode
+2019-09-29 [Jeroen] Lint (Code->Analyse) on all canze:actors, canze:adaptors and canze:classes
+2019-09-18 [Jeroen] Lint (Code->Analyse) on all canze:activities.
+2019-09-18 [Jeroen] Tyres: avoid crash when message is null, fix error message, fix Lint warning
+
+---< Version 1.43 / 2019.09.16 / 44 >---
+2019-09-07 [Jeroen] androidx.appcompat:appcompat to 1.1.0
+2019-09-07 [Jeroen] Removed a lint warning for 1/2/3 in strings
+2019-09-07 [Jeroen] Fixed an XML problem in UK language file
+2019-09-06 [Jeroen] Gradle to 3.5.0
+2019-09-06 [Jeroen] Avoid crash in AllDataActivity
+2019-08-16 [Jeroen] Experiment to avoid crash on ParcelFileDescriptor.java:175 on Android <= 5 (<23)
+2019-08-15 [Cedric] Ammended FR
+2019-08-15 [Jeroen] Added "Not OK" in DE/FR/RU/UK
+2019-08-15 [Jeroen] Avoided crash in Device
+2019-08-11 [Jeroen] Cleaned up translation files
+2019-08-11 [Jeroen] Fixed layout glitch github #554 thanks Gerd
+2019-08-11 [Jeroen] Fixed translation error github #554 thanks Gerd
+
+---< Version 1.42 / 2019.08.06 / 43 >---
+2019-08-04 [Jeroen] Removed ES as announced, removed message from NEWS
+2019-07-15 [Jeroen] Avoid NullPointerException in DTC
+2019-07-15 [Jeroen] Avoid NullPointerException in TyresActivity
+2019-07-12 [Jeroen] IDE and Gradle upgraded to 3.4.2
+2019-07-12 [Jeroen] Fixed a crash passing null to debug
+
+---< Version 1.41 / 2019.06.30 / 42 >---
+2019-06-30 [Jeroen] Removed FLukan - Twizy references
+2019-06-22 [Jeroen] Fixed swapped Read Write buttons, added message about driving. Fixed error msg when message.isError.
+2019-06-20 [Oleksiy] Added Russian and Ukranian
+2019-06-19 [Jeroen] Added Overinflated message
+2019-06-4 [Jeroen] Another attempt to avoid crash in Toast
+
+---< Version 1.40 / 2019.05.13 / 41 >---
+2019-05-19 [Jeroen] Undo Avoid creating a (Main)activity instance
+2019-05-19 [Jeroen] Gradle to 3.4.1
+2019-03-30 [Jeroen] Removed minified/proguard
+
+---< Version 1.39 / 2019.05.13 / 40 >---
+2019-03-26 [Jeroen] Unified yellow bar font settings
+2019-03-26 [Jeroen] News bar now acceppts html tags
+2019-03-26 [Jeroen] Expanded experiment to avoid on abort crash in Android 8.1 to widgets
+2019-05-20 [Jeroen] Catch parseint exception on a malformed frame
+2019-05-19 [Jeroen] Avoid creating a (Main)activity instance (ouch)
+2019-05-19 [Jeroen] Check if log files are writeable
+2019-05-19 [Jeroen] Gradle to 3.4.0
+
+---< Version 1.38 / 2019.05.13 / 39 >---
+2019-04-21 [Jeroen] Removed now unused translation entries to avoid lint errors
+2019-04-21 [Jeroen] Enabled minification (R8), for the moment also in debug build variant, with limited name obfuscation
+2019-04-20 [Jeroen] Removed toasts and added Spinner to all data. Moved all spinner changes to the UI thread
+2019-04-19 [Jeroen] Replaced toast when loading settings with Spinner
+2019-04-19 [Jeroen] Moved Settings button to three-dot menu
+2019-04-19 [Jeroen] Changed Settings and CanSee settings UI to conform to convention (but kept Cancel, now in three-dots)
+2019-04-19 [Jeroen] Added Android home ("back") button to CanzeActivities
+2019-04-17 [Jeroen] Extra check for non null CanzeDatasource instance
+2019-04-17 [Jeroen] 2nd experiment to avoid NullPointerException crash in Toast
+2019-04-17 [Jeroen] let it crash on the caller of CanzeDataSource.getInstance to see the call stack
+2019-04-17 [Jeroen] Avoid nullpointerException in BluetoothManager.write
+2019-04-17 [Jeroen] Gradle to 3.4.0
+2019-04-16 [Jeroen] Avoid NullPointerException crash in Timeplot
+2019-04-16 [Jeroen] androidx.legacy:legacy-support-v4 1.0.0-beta01 -> 1.0.0
+2019-04-16 [Jeroen] Removed GSON source and replaced with gradle implementation
+
+---< Version 1.37 / 2019.04.15 / 38 >---
+2019-03-14 [Jeroen] Avoid NullPointerException crash in SettingsActivity.fillDeviceList
+2019-03-13 [Jeroen] Cleanup of toasts (logic, inheritance, use resources, avoid if not needed)
+2019-03-08 [Jeroen] Experiment to avoid crash in Android 8.1 in EditText, see manifest for details
+2019-03-05 [Jeroen] Avoid crash device being null in Tyres buttonread/write
+2019-04-07 [Jeroen] Avoid $BadTokenException crash in Toast on Android 7.1 (SDK 25)
+2019-04-05 [Bob] Added possibility to install on external storage
+
+---< Version 1.36 / 2019.04.04 / 37 >---
+2019-04-04 [Bob] Wrong reference while fixing a bug ... grrr
+
+---< Version 1.35 / 2019.04.04 / 36 >---
+2019-04-04 [Bob] Update in Consumption, dash version
+2019-04-04 [Jeroen] Experiment to avoid ANR in CanzeActivity.onResume
+2019-04-04 [Jeroen] Experiment to avoid IllegalThreadStateException crash in BluetoothManager
+2019-04-04 [Jeroen] Experiment to avoid NullPointerException crash in Toast
+2019-04-03 [Cedric] Updated fr language
+2019-03-31 [Jeroen] Avoid crashes on unexpected strings from ELM
+2019-03-31 [Jeroen] Avoid SQLException crash
+2019-03-31 [Jeroen] Removed logic to have the device do frame filtering
+2019-03-31 [Jeroen] Implemented INTERVAL_ONCE for ECU initialization command
+2019-03-19 [Jeroen] Avoid NullPointerException crash in Plotter
+2019-03-19 [Jeroen] Avoid IndexOutOfBounds crash in Timeplot
+2019-03-16 [Jeroen] Added All Data
+2019-03-16 [Jeroen] Fixed Range Activity
+2019-03-16 [Jeroen] Removed Tests Bob
+2019-03-16 [Jeroen] Moved BCB to chargingtech
+2019-03-16 [Jeroen] Avoid crash in Driving when entering nonsensical data
+2019-03-15 [Jeroen] Removed all unused resources
+2019-03-15 [Jeroen] Removed sl language
+2019-03-15 [Jeroen] Avoid crash when BT device name is not in the pref file.
+
+---< Version 1.34 / 2019.03.12 >---
+2019-03-11 [Jeroen] Avoid crash when Bluetooth access is denied
+2019-03-07 [Jeroen] Avoid crash on outOfBounds in Plotter.setValue
+2019-03-05 [Jeroen] Avoid crash on displaying Tyrevalve IDs
+2019-03-05 [Jeroen] Avoid crash on outOfBounds in Fields.get. Formatting cleanup.
+2019-03-05 [Jeroen] Avoid crash on null getWindowManager. Formatting cleanup.
+2019-03-05 [Jeroen] Update news, update gradle plugin. WIP FieldsAlt
+
+---< Version 1.33 / 2019.03.05 >---
+2019-03-03 [Jeroen] #526 fix and spelling.
+2019-02-26 [Jeroen] Moved charging history to technical, added icon
+2019-02-25 [Jeroen] Added serial number to Battery screen
+2019-02-24 [Jeroen] Avoid nullPointerExceptions and ClassCastExceptions
+2019-02-24 [Jeroen] Avoid crash in CanzeActivity when reconnecting
+2019-02-24 [Jeroen] Avoid ANR when reading/writing Tyre IDs
+2019-02-23 [Jeroen] Avoid ANR / black screen when Bluetooth needs to reconnect (in previous commit)
+2019-02-23 [Jeroen] Fixed null pointer exceptions in displayNews. Minor layout fix for news
+
+---< Version 1.32 / 2019.02.23 >---
+2019-02-20 [Jeroen] Added counters and total kWh to Charging history #531
+2019-02-20 [Jeroen] Added soh to Battery and Prediction
+2019-02-20 [Jeroen] Fixed bugs in Battery class
+2019-02-19 [Jeroen] Deleted Dutch (put in news bar)
+2019-02-19 [Jeroen] Icon cleanup to a somewhat more consistent style
+2019-02-19 [Jeroen] Deleted Dutch
+2019-02-18 [Jeroen] Fixed clipping bug #530
+2019-02-18 [Jeroen] Minor bug fixes and wording
+
+---< Version 1.31 / 2019.02.18 >---
+2019-02-16 [Jeroen] Fixed error in BCB (uppercase hex :-( ) and inject Testerpresent-Awake
+2019-02-16 [Jeroen] Moved leak to tech, code and layout cleanup
+2019-02-16 [Jeroen] Implemented real time news
+2019-02-16 [Jeroen] Fixed issue with consumption in miles mode #520
+2019-02-16 [Bob] Added back reset from virtual field delta, added new delta field with no reset
+2019-02-16 [Jeroen] Avoid negative trip numbers
+2019-02-15 [Bob] Removed reset from virtual field delta
+2019-02-15 [Bob] Trying to reduce stores points in TimePlot (with CanSee data flow is much stronger!!)
+
+---< Version 1.30 / 2019-02.10 >---
+2019-02-10 [Jeroen] Trip consumption added #513
+2019-02-10 [Jeroen] Several changes to wording, thanks AlbinoZoe #455
+2019-02-03 [Jeroen] Added PTC relays in clima #521
+2019-02-03 [Jeroen] Rewording #523
+2019-02-03 [Jeroen] re-added parking brake status (regression on ELM testing) #526
+2019-02-03 [Jeroen] Fixed values for unavailable charging power
+2019-02-03 [Jeroen] Optimized initConnection in relation to new injects
+2019-02-03 [Jeroen] Added better ZE40 formula to prediction
+2019-02-03 [Jeroen] Added R110 alias
+2019-02-03 [Jeroen] Fixed wording in conditioning status #522
+2019-01-29 [Bob] New inject methods
+2019-01-29 [Jeroen] Added 12v pulsbox values
+2019-02-07 [Bob] Fixed some crashes indicated by the store
+2019-02-07 [Bob] Trying to reduce the entries in the DB (with CanSee data flow is much stronger!!)
+2019-02-10 [Bob] Differenciate font size in Timeplot for landscape/portrait mode
+
+---< Version 1.29 / 2019.01.27 >---
+2019-01-26 [Jeroen] Clima RPM replaced for Watt
+2019-01-23 [Bob] Dash device screen for consumption added
+2019-01-18 [Jeroen] Implemented multi frame outgoing ISO-TP messages, fixes in ELM code
+2019-01-18 [Jeroen] Improvments in DTC dump. BCB now works
+2019-01-18 [Jeroen] Removed ConsumptionOld
+2019-01-18 [Jeroen] Slowed down Charging history queries
+2019-01-17 [Jeroen] Better miles display, fixed miles problem in virtual fields
+2019-01-16 [Jeroen] Prepared code and CSVs for ISO-TP only option
+2019-01-13 [Jeroen] Removed all ECU classes and replaced by external CSVs
+2019-01-13 [Jeroen] Fixed minor errors in charging screens
+2019-01-12 [Jeroen] Slowed down temperature queries
+2019-01-08 [Bob] Added setttings for CanSee dongle (hidden)
+2019-01-05 [Jeroen] Cleanup BobDue code for CanSee dongle, added integrity checks
+2019-01-04 [Jeroen] Several internal settings (Android Studio, Gradle, .gitignore)
+
+---< Version 1.28 / 2018.05.08 >---
+2018-03-24 [Jeroen] Added 12 volt battery replacement advice to activity_auxbat
+2018-03-24 [Jeroen] Added 1 volt battery replacement advice to activity_auxbat
+2018-01-18 [Jeroen] Re-enabled Energy consumed on request
+
+---< Version 1.27 / 2018.01.11 >---
+2018-01-07 [Jeroen] Fixed small issue for dongle emulator
+2018-01-07 [Jeroen] Fixed issue with DTC of the TCU
+2017-12-22 [Bob] Fixed nullpointer exception
+2017-12-22 [Bob] Fixed midpoint in instant consumption
+2017-12-17 [Jeroen] Fixed runtime crash by adding bounds checking in several message loopkups
+2017-12-17 [Bob, Jeroen] Internal settings after upgrade Android Studio, removed new compile errors
+
+---< Version 1.26 / 2017.12.17 >---
+2017.12.12 [Jeroen] Finalized new consumpion, added alpha color, some plot debugging code
+2017.11.26 [Jeroen] Added NewConsumption branch
+2017.11.08 [Jeroen] Fixed spurious error in MainActivity (null pointer in setBluetoothState)
+2017.11.08 [Jeroen] Added aux battery
+2017.10.22 [Jeroen] Fixed bug calculating energy until full issue #470
+2017.10.05 [Jeroen] Fixed loading fields bug in EcuDiagBcb
+2017.12.10 [Bob] Fixed the triangle timeplot issue #310
+
+---< Version 1.25 / 2017.06.02 >---
+2017.03.06 [Bob] Enabled Twizy. More to come soon ...
+2017.03.07 [Bob] Prepared new logging feature (NLF)
+2017.03.07 [Bob] Fixed #452: Charts: Color of description the same as color of line
+2017.03.08 [Bob] Fixed #451: x-axis of charts going back and forth during logging
+2017.03.16 [Bob] NLF: save/load/modify list of fields to log
+2017.03.17 [Bob] NLF: make listing nicer
+
+---< Version 1.24 / 2017.02.21 >---
+2017.02.21 [Bob] Hotfix for issue #441
+2017.02.21 [Bob] Trying to fix #310
+
+---< Version 1.23 / 2017.02.19 >---
+2017.02.16 [Bob] Repair poller restart for HTTP based device
+2017.02.16 [Bob] Fixed some imprecisions in widget Timeplot
+2017.02.16 [Bob] Added option colorline[x] for widget Timeplot
+
+---< Version 1.22 / 2017.02.12 >---
+2017.02.12 [Jeroen] Added total energy to ChargingTech #430
+2017.02.12 [Bob] Spanish language file added, many thanks to the contributors
+2017.02.11 [Jeroen] Improved code to get DTC's
+2017.02.11 [Jeroen] Added TCU to the DTC reporting
+2017.02.11 [Jeroen] Changed http interface to use RequestID instead of ResponseID
+2017.02.09 [Jeroen] Added compressor RPM graph (0-4000) in climatech
+2017.02.09 [Jeroen] Fixed Y axis on ChargingGraphs for model 90s
+2017.02.06 [Jeroen] Fixed formatting problem in ChargingTech
+2017.02.05 [Jeroen] Code fixup on getting strings from language packs
+2017.02.05 [Jeroen] Added debug lines to all running screens
+2017.02.05 [Jeroen] Lots of code and layout cleanup
+2017.02.03 [Jeroen] Allow operation without BT adapter so runs on emulator
+2017.02.02 [Jeroen] Fixed ELM test
+2017.02.02 [Jeroen] Fixed ELM test #427
+2017.02.02 [Bob] Merged German with file received from Roland Klose <rkl.fritzbox@gmx.de>
+2017.02.02 [Jeroen] Compressor power dissed, replaced with RPM.
+2017.02.02 [Jeroen] Hotfix on master: log level #417
+2017.02.02 [Jeroen] Added German (Thank you Stefan!)
+2017.02.01 [Jeroen] Climatech, climate replaced power by a graph
+2017.01.31 [Jeroen] Added Slovenian (Thank you Zdenko!)
+2017.01.27 [Jeroen] Climatech, Power as extra field
+
+---< Version 1.21 / 2017.01.29 >---2017.01.29 [Bob] Fixing issue: V1.20 crashes #407
+2017.01.29 [Bob] Fixing issue: V1.20 crashes #407
+
+---< Version 1.20 / 2017.01.28 >---
+2017.01.28 [Bob] Forgot to pull before compiling!!!
+2017.01.28 [Bob] Added missing FR strings
+
+---< Version 1.19 / 2017.01.28 >---
+
+2017.01.20 [Jeroen] Sped up / simplified selecting next frame by using .min instead of .sort in the queues
+2017.01.14 [Jeroen] Implemented DebugListener so Device can send debug lines to Activity without Toasts
+2017.01.14 [Jeroen] Reduced device resets (one retry without reset)
+2017.01.14 [Jeroen] Fixed graph title in clima to resources
+2017.01.14 [Jeroen] Added debugging to ELM327http to find hangup
+2017.01.13 [Jeroen] More code cleanup and String separation
+2017.01.08 [Bob] Fixed a zoomin problem
+2017.01.08 [Bob] Fixed a crash of the charging screen
+2017.01.08 [Bob] Fixed a crash of the climate screen
+2017.01.07 [Jeroen] Separated all strings, Dutch translation as example. Minor fixes
+2017.01.07 [Jeroen] Changed initListeners to be abstract, removed repeated code for addListeners
+                    and fiels subscription management. Still bug in zoom one widget
+2017.01.07 [Bob] Fixed timeplotter x-axis label problem (second try)
+2017.01.06 [Bob] Fixed a wrong event for Settings.deviceList
+2017.01.05 [Jeroen] Settings changed so the last http address is retained after choosing BT device
+2017.01.04 [Bob] Fixed timeplotter x-axis label problem
+2017.01.04 [Jeroen] Improved temp/balances part in chargingtech, removed possible charging pwr from climatech
+2017.01.04 [Jeroen] Cleanup of Lint (almost everywhere, not complete)
+2017.01.03 [Jeroen] Modified gateway settings to enable on "HTTP" instead of >4th device and a bit of cleanup
+2017.01.03 [Jeroen] Fixed layouts and string resources in Firmware, Consumption, Driving, DTC, ELMtest
+2017.01.02 [Bob] Modified settings to add configurable address if HTTP selected
+2016.12.31 [Jeroen] Better formatting in charging and chargingtech
+2016.12.30 [Bob] Added stoppable thread for DTC reading
+2016.12.30 [Bob] Removed min & max values from Plotter widget #381
+2016.12.30 [Jeroen] Updated layouts braking, charging, driving, firmware, prediction, tyres
+2016.12.30 [Jeroen] Minor changes in Main and Battery layouts
+2016.12.30 [Jeroen] Climatech moved to technical section, better layout (use filler)
+2016.12.30 [Jeroen] ClimaTech added ClimaLoopMode, moved batt temp to graph
+2016.12.29 [Jeroen] Alernative DTC code display
+2016.12.29 [Jeroen] ELM327 fixed flush hanging if ELM327 babbling
+2016.12.29 [Jeroen] ELM327Http better error messages
+2016.12.25 [Jeroen] Backported a few changes in the ELM driver from gateway to CanZE
+2016.12.24 [Jeroen] Added Dtc Test class and initialisation code, completed display of DTCs
+2016.12.24 [Jeroen] Started implementing DTC messages per EcuDiagXXX
+2016.12.24 [Jeroen] Activated and debugged string fields, and loaded proper options in EcuDiagCLIM
+2016.12.24 [Jeroen] Moved onMessageCompleteEvent to class Message and removed MessageListener
+2016.12.23 [Jeroen] Fixed compile time-date in settings, issue #370
+2016.12.23 [Jeroen] Populated dynamic classed for UBP
+2016.12.22 [Jeroen] Populated dynamic classed for EPS and PEB
+2016.12.22 [Jeroen] Populated dynamic classed for CLUSTER (instrument panel, oops in French)
+2016.12.22 [Jeroen] Fixed a few minor bugs in ChargingTech
+2016.12.22 [Jeroen] Added isZOE and isFLuKan for easier programming and better readability
+2016.12.22 [Jeroen] Populated dynamic classed for EVC and BCB/JB2
+2016.12.21 [Jeroen] Class EcuDiag added dumping results to file
+2016.12.20 [Jeroen] Changed DtcActivity to Dynamic Class loading for definitions
+2016.12.20 [Jeroen] Populated dynamic classed for CLIM and LBC
+2016.12.20 [Jeroen] Added unit to numerical Diagnose values
+2016.12.19 [Jeroen] Added Range to manifest (crashed CanZE)
+2016.12.18 [Jeroen] Class Chargingtech removed Ah, added balancing switches
+2016.12.18 [Jeroen] Class Mainactivity crash after clearing data (deviceName null)
+2016.12.18 [Jeroen] Put dummy gateway server online
+2016.12.18 [Jeroen] Class ELM327Http added
+2016.12.18 [Jeroen] Class Settingsactivity ELM327Http and Http added
+2016.12.14 [Jeroen] Class BluetoothManager implemented dummyMode
+2016.12.04 [Jeroen] Class Mainactivity registerApplicationFields() changed to public. Avoid null exception when
+                        speed field is not available, loadsettings sets BT dummyMode
+2016.12.04 [Jeroen] Class Frames structure for initialization now identical to Fields (subframes)
+2016.12.04 [Jeroen] Added EcuDiagLBC with a small init string
+2016.11.29 [Jeroen] Class (Virtual)Field and Fields: added decent String and List support
+2016.11.29 [Jeroen] DtcActivity: added doDiag and corresponding button in activity
+2016.11.29 [Jeroen] Class Ecu: added dtcs and frames and possibily for dynamic loading. Probably unneeded
+2016.11.29 [Jeroen] Class Field: added getFrame, optional name and optional list. Offset to int
+2016.11.29 [Jeroen] Class VirtualField: match with Field
+2016.11.29 [Jeroen] Class Frame: added fields, addField and getAllFields to optimize Fields.onMessageCompleteEvent
+2016.11.29 [Jeroen] Class Device: minor reformatting
+2016.12.18 [Jeroen] Changed overall logic that frames and messages are bound to a device, not fields
+2016.11.29 [Jeroen] Class Fields: optimized Fields.onMessageCompleteEvent massively. Added fillDynamic, overloaded load()
+                        get options field back in line and update mains spreadsheet to that and cars
+                        Removed all 0x from codes
+2016.10.23 [Jeroen] Ensure frames are reloaded before fields
+
+
+---< Version 1.18 / 2016.11.08 >---
+
+2016.11.08 [Bob] Fixed a bug leading to non displaying some values
+
+---< Version 1.17 / 2016.10.31 >---
+
+2016.10.23 [Bob] Made widgets ready for different cars
+2016.10.23 [Bob] Application crashed for any selection of ZOE R240, ZOE Q90 and ZOE R90
+2016.10.23 [Jeroen] Split ZOE into ZOE Q210, ZOE R240, ZOE Q90 and ZOE R90 for battery prediction
+
+---< Version 1.16 / 2016.10.19 >---
+
+2016.10.11 [Jeroen] Refined length of prediction interval
+2016.08.24 [Jeroen] Split ZOE into ZOE Q210 and ZOE R240 for battery prediction
+
+---< Version 1.15 / 2016.08.10 >---
+
+2016.07.28 [Bob] Fixed a scaling error in Plotter & BarGraph widgets
+2016.07.12 [Jeroen] updated Zoé to ZOE (official Renault verbiage)
+2016.07.12 [Jeroen] major update in prediction logic
+
+---< Version 1.14 / 2016.06.13 >---
+
+2016.06.16 [Jeroen] fixed many bugs in prediction and battery, moved to Tech section
+2016.06.16 [Jeroen] fixed bug in HV kilomters
+2016.05.16 [Bob] added forward mode to graphs
+
+---< Version 1.13 / 2016.05.15 >---
+
+2016.05.14 [Jeroen] Added 8 bits to HV kilometers (bringing it in line with car kms), attempted fix issue #337
+2016.04.18 [Jeroen] Added (untested) code to get battery data into the prediction plotter
+2016.04.18 [Jeroen] Small improvements to the Battery model
+2016.04.18 [Bob] Trying to fix issue #310
+2016.04.18 [Bob] The plotter on the Battery screen has been fixed
+
+---< Version 1.12 / 2016.04.11 >---
+
+2016.04.06 [Bob] Trying to resolve a NullPointerException ereported by Google Dev Console
+2016.03.31 [Bob] Modified Prediction fragement to work with Timeplot instead of plotter
+2016.03.13 [Bob] Added timestamp to field logger
+2016.03.06 [Bob] Battery screen: uncommented SOH field, modified scale for voltage (issue #329)
+2016.03.04 [Jeroen] Improved description of SOC fields. Improved Class Battery to use int of temperature
+2016.03.02 [Jeroen] Added two 14V system fields to the Charge Tech. Trying to figure current
+2016.02.28 [Jeroen] Added Battery model to the prediction fragment with some fixed values
+2016.02.26 [Jeroen] Added Battery model
+2016.02.22 [Bob] Added Prediction fragement with demo code on how to use the plotter without any field
+2016.02.19 [ChrisMa] GPS Tracker class added and GPSTestActivity (still experimental)
+2016.02.16 [Jeroen] Miles rounding
+
+---< Version 1.11 / 2016.02.15 >---
+
+2016.02.15 [Jeroen] Simplified virtual field initialisation, check for dependant field existence (issue #318)
+2016.02.15 [Jeroen] Added a few temperature testing fields to techclima (research #316)
+2016.02.14 [ChrisMa] DataLogger Output fixed: empty NL removed, date corrected
+2016.02.14 [ChrisMa] DataLogger-Activation moved to loadSettings in MainActivity
+
+---< Version 1.10 / 2016.02.14 >---
+
+2016.02.11 [Jeroen] Added battery KM to CahrgingTech (request Harm)
+2016.02.10 [Jeroen] Added clima/battery parameters in Playground JM
+2016.02.08 [Jeroen] Made firmware screen scrollable, issue #311
+2016.01.27 [Jeroen] Squeezed fields init string
+2016.01.26 [Jeroen] Brighten progress bar colors to make numericals readable
+2016.01.26 [Jeroen] Bug fix in numerical torque display
+2016.01.25 [Jeroen] Enlarged numerical vales in consumption screen (top bars)
+2016.01.25 [Jeroen] Changed consumption scale from 5-25 to 0 - 40
+2016.01.25 [Jeroen] Fixed non display of positive torque in consumption (untested)
+2016.01.24 [Bob] tried to put back the label in the top bars of the consumption screen
+2016.01.24 [Jeroen] Changed car to bit-map in fields.
+2016.01.24 [Jeroen] Changed immediate consumption graph to a Low pass filtered value in a much more limited range. A bit experimental.
+2016.01.24 [Jeroen] Added 12V in charging, which is not functioning well for the Zoe, needs more debugging
+2016.01.12 [Chris] DataExport Mode re-activated
+2016.01.10 [Jeroen] Optimized field lookup a bit
+2016.01.10 [Bob] field logging: simple field logging
+2016.01.10 [Bob] data logging: no more empty file creation on application start
+2016.01.07 [Jeroen] added minim distance 20 pixels for move trigger in WidgetView
+2016.01.06 [Jeroen] Optimized field/fields, added sign bit
+2016.01.06 [Bob] consumption screen: small color update
+2015.12.29 [Jeroen] Charging graphs, added second axis in first graph
+
+---< Version 1.09 / 2015.12.29 >---
+
+2015.12.29 [Jeroen] Forgot to commit the new icon set
+2015.12.29 [Jeroen] promoted charging graphs to Technical, added icon
+2015.12.29 [Bob] consumption screen: graphical improvement
+2015.12.29 [Bob] consumption screen: label optimization
+2015.12.28 [Bob] consumption screen: scaling optimisations
+2015.12.28 [Bob] consumption screen: added instant consumption as bar
+2015.12.28 [Jeroen] split SOC in User and Real
+2015.12.28 [Jeroen] Fixed misleading label for torque bar
+2015.12.28 [Jeroen] Changed Zoe reference firmware versions
+2015.12.28 [Bob] consumption screen: re-configuration
+2015.12.28 [Bob] consumption screen: configured top timeplot
+2015.12.26 [Bob] consumption screen: added motor wheel torque bar & graph
+2015.12.23 [Bob] CanzeActivity: peparations for commun field management
+2015.12.23 [Bob] virtual field listeners where not unregistering as they should
+2015.12.23 [Bob] CanzeActivity: removed some commented old code
+2015.12.23 [Jeroen] Fixed TPM pressure unavailable bug, slowed down query
+2015.12.23 [Jeroen] Slowed down query for FluenceKangooTemps
+2015.12.23 [Bob] trying to fix issue #262
+2015.12.22 [Bob] modified "temperature" screen to "screen tests"
+2015.12.22 [Jeroen] Added Aim bar in braking screen
+2015.12.22 [Jeroen] Added charging graphs in Experimental
+2015.12.22 [Jeroen] Added virtual field DC power and updated Charging accordingly
+2015.12.22 [Bob] settings: spelling errors (#262)
+2015.12.22 [Bob] widgets: added feature "timeScale" for timed plots
+2015.12.22 [Bob] consumption screen: removed kWh/100km from bottom graph on second Y-axe
+2015.12.22 [Bob] consumption screen: added kWh/100km to bottom graph on second Y-axe
+2015.12.22 [Bob] widgets: modified timeplot to support second Y-axe
+2015.12.21 [Bob] consumption screen: modified kWh/100km
+2015.12.21 [Bob] widgets: modified bar (move around zero & gradient support)
+2015.12.21 [Bob] consumption screen: fixed another gradient bug
+2015.12.20 [Bob] consumption screen: fixed interval error & gradient bug (crashed in some cases)
+2015.12.20 [Jeroen] changed virtualfields to one ECU and responseID as selector
+2015.12.20 [Bob] consumption screen: color and interval update
+2015.12.19 [Bob] consumption screen: moved SoC (for testing) to lower graph
+2015.12.19 [Bob] consumption screen: fixed gradient for speed
+2015.12.19 [Bob] optimisation in gradient area graph
+2015.12.19 [Jeroen] added new virtualFields 801 (FrictionTorque) and 802 (FrictionPower)
+2015.12.19 [Jeroen] all text screens: major code cleanup on the onXxxx code
+2015.12.19 [Bob] fixed issue #262:  Formal Disclaimer answers not fully visible on phone for o.a. Safe Driving Mode setting
+2015.12.19 [Bob] fixed issue #271: In battery screen no cell voltages are displayed
+2015.12.14 [Bob] screen consumption: gradient are graph for instant consumption
+
+---< Version 1.08 / 2015.12.13 >---

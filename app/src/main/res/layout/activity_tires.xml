@@ -1,0 +1,360 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="lu.fisch.canze.activities.TiresActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:gravity="center"
+                        android:text="@string/label_TireFL" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:gravity="center"
+                        android:text="@string/label_TireFR" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_TireFLState"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/text_TireFRState"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_TireFLPressure"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center"
+                        android:textSize="48sp" />
+
+                    <TextView android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/text_TireFRPressure"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center"
+                        android:textSize="48sp" />
+                </TableRow>
+                <TableRow>
+
+                <EditText
+                    android:id="@+id/text_TireFLId"
+                    android:layout_weight="5"
+                    android:background="?attr/colorButtonNormal"
+                    android:digits="0123456789ABCDEF"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="6"
+                    android:text="000000" />
+
+                <TextView android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/text_TireFRId"
+                    android:layout_weight="5"
+                    android:background="?attr/colorButtonNormal"
+                    android:digits="0123456789ABCDEF"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="6"
+                    android:text="000000" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView android:layout_weight="1"
+                android:layout_height="20dp"
+                android:layout_width="0dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="?attr/colorButtonNormal"
+                android:text="@string/help_PressuresMbar" />
+            <TextView android:layout_weight="1"
+                android:layout_height="20dp"
+                android:layout_width="0dp" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:gravity="center"
+                        android:text="@string/label_TireRL" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:gravity="center"
+                        android:text="@string/label_TireRR" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_TireRLState"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/text_TireRRState"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_TireRLPressure"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center"
+                        android:textSize="48sp" />
+
+                    <TextView android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/text_TireRRPressure"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:text="@string/default_Dash"
+                        android:gravity="center"
+                        android:textSize="48sp" />
+                </TableRow>
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/text_TireRLId"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:digits="0123456789ABCDEF"
+                        android:enabled="false"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="6"
+                        android:text="000000" />
+
+                    <TextView android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/text_TireRRId"
+                        android:layout_weight="5"
+                        android:background="?attr/colorButtonNormal"
+                        android:digits="0123456789ABCDEF"
+                        android:enabled="false"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="6"
+                        android:text="000000" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/default_DoubleSpace" />
+
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:text="@string/label_TireSpdPresMisadaption" />
+
+                    <TextView
+                        android:id="@+id/text_TireSpdPresMisadaption"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/default_Dash"
+                        android:gravity="end" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button_TiresRead"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="@string/button_Tires_read" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        />
+
+                    <Button
+                        android:id="@+id/button_TiresWrite"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="@string/button_Tires_write" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button_TiresSaveA"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="SAVE TO A" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        />
+
+                    <Button
+                        android:id="@+id/button_TiresLoadA"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="LOAD FROM A" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button_TiresSaveB"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="SAVE TO B" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        />
+
+                    <Button
+                        android:id="@+id/button_TiresLoadB"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="LOAD FROM B" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button_TiresSwap"
+                        android:layout_weight="11"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:text="SWAP FRONT REAR" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- debug line -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_debug" />
+
+        <TextView
+            android:id="@+id/textDebug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_debug" />
+
+    </LinearLayout>
+
+</LinearLayout>
