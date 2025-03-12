@@ -31,5 +31,6 @@
         <attr name="intermediateColor" format="string"/>
         <attr name="titleColor" format="string"/>
         <attr name="text" format="string" />
+        <attr name="colorButtonNormal" format="color" />
     </declare-styleable>
 </resources>

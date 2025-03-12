@@ -1,8 +1,17 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
+
+ext {
+    kotlin_version = '1.8.22'
+}
 
 android {
+    namespace 'lu.fisch.canze'
+    compileSdk 35
+    buildFeatures {
+        buildConfig = true
+    }
     signingConfigs {
         release {
             storeFile file("$project.rootDir/keystores/CanZeKeyStore.jks")
@@ -11,25 +20,24 @@ android {
             keyPassword 'canze4us!'
         }
     }
-    compileSdkVersion 29
-    //buildToolsVersion '26.0.2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
     defaultConfig {
         applicationId "lu.fisch.canze"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 35
         versionName '1.62'
         versionCode 94
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+        buildConfigField "String", "BRANCH", "\"" + getGitRevParseInfo() + "\""
     }
     buildTypes {
         release {
             minifyEnabled false
-            // minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        //debug {
-        //    minifyEnabled true
-        //    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        //}
     }
     flavorDimensions "edition"
     productFlavors {
@@ -40,16 +48,9 @@ android {
             dimension "edition"
         }
     }
-    defaultConfig {
-        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
-        buildConfigField "String", "BRANCH", "\"" + getGitRevParseInfo() + "\""
-        signingConfig signingConfigs.release
-    }
-    lintOptions {
-        checkReleaseBuilds false
-        // Or, if you prefer, you can continue to check for errors in release builds,
-        // but continue the build even when errors are found:
+    lint {
         abortOnError false
+        checkReleaseBuilds false
         disable 'TypographyFractions'
     }
 }
@@ -61,13 +62,13 @@ def getGitRevParseInfo() {
 }
 
 dependencies {
-    // BoM for the Firebase platform
-    playstoreImplementation platform('com.google.firebase:firebase-bom:26.2.0')
-
-    // Dependencies for the desired Firebase products without specifying versions
-    playstoreImplementation 'com.google.firebase:firebase-analytics'
-    playstoreImplementation 'com.google.firebase:firebase-crashlytics'
-
+//    playstoreImplementation platform('com.google.firebase:firebase-bom:33.10.0')
+//    playstoreImplementation 'com.google.firebase:firebase-analytics'
+//    playstoreImplementation 'com.google.firebase:firebase-crashlytics'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"
+//    implementation "org.jetbrains.kotlin:kot./gradlew cleanlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'

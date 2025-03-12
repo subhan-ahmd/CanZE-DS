@@ -108,6 +108,8 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
     // url of gateway if in use
     private static String gatewayUrl = null;
 
+    private static final int REQUEST_BLUETOOTH_CONNECT = 1;
+
     // public final static int RECEIVE_MESSAGE      = 1;
     public final static int REQUEST_ENABLE_BT = 3;
     public final static int SETTINGS_ACTIVITY = 7;
@@ -447,6 +449,7 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -456,6 +459,16 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
                     storageGranted = false;
                     MainActivity.debug("MainActivity.onRequestPermissionsResult:storage not granted");
                 }
+                break;
+            case REQUEST_BLUETOOTH_CONNECT:
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, proceed with Bluetooth operations
+                // Add your Bluetooth operations here
+                BluetoothManager.getInstance().initializeBluetooth(this);
+            } else {
+                // Permission denied, handle accordingly
+                Toast.makeText(this, "Bluetooth permission denied", Toast.LENGTH_SHORT).show();
+            }
                 break;
 
             // other 'case' lines to check for other
@@ -496,6 +509,11 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH_CONNECT}, REQUEST_BLUETOOTH_CONNECT);
+            }
+        }
 
         // navigation bar
         AppSectionsPagerAdapter appSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());

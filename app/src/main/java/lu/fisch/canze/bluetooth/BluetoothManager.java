@@ -28,9 +28,12 @@ package lu.fisch.canze.bluetooth;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -47,6 +50,19 @@ import lu.fisch.canze.interfaces.BluetoothEvent;
  * Created by robertfisch on 03.09.2015.
  */
 public class BluetoothManager {
+    public void initializeBluetooth(Context context) {
+        if (bluetoothAdapter == null) {
+            Toast.makeText(context, "Device does not support Bluetooth", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!bluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            context.startActivity(enableBtIntent);
+        }
+
+        // Additional initialization code if needed
+    }
 
     /* --------------------------------
      * Sigleton stuff
